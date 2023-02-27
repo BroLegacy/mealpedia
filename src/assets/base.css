@@ -6,3 +6,16 @@
   position: relative;
   font-weight: normal;
 }
+
+img{
+  width: 30vw;
+}
+
+@media (max-width: 768px) {
+  img{
+    width: 50vw;
+  }
+  nav{
+    flex-direction: column;
+  }
+}
