@@ -2,12 +2,12 @@
   <div>
     <h1>Plat Aléatoire</h1>
     <button @click="getRandomMeal">Afficher un plat aléatoire</button>
-    <div v-if="meal">
-      <h3>{{ meal.strMeal }}</h3>
+    <div v-if="meal" style="margin-top: 25px">
+      <h2>{{ meal.strMeal }}</h2>
       <img :src="meal.strMealThumb" :alt="meal.strMeal" />
-      <p><strong>Catégorie:</strong> {{ meal.strCategory }}</p>
-      <p><strong>Origine:</strong> {{ meal.strArea }}</p>
-      <h4>Ingrédients:</h4>
+      <p><strong>Catégorie :</strong> {{ meal.strCategory }}</p>
+      <p><strong>Origine :</strong> {{ meal.strArea }}</p>
+      <h3>Ingrédients :</h3>
       <ul>
         <li v-for="ingredient in ingredients">{{ ingredient }}</li>
       </ul>

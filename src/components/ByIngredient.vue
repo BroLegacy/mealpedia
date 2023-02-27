@@ -7,7 +7,7 @@
       <option v-for="ingredient in ingredients" :value="ingredient">{{ ingredient }}</option>
     </select>
     <div v-if="meals && meals.length">
-      <h2>{{ meals.length }} résultats :</h2>
+      <h2>{{ meals.length }} {{ meals.length > 1 ? 'résultats' : 'résultat' }} :</h2>
       <ul>
         <li v-for="meal in meals" :key="meal.idMeal">
           <router-link :to="{ name: 'meal-details', params: { id: meal.idMeal } }">{{ meal.strMeal }}</router-link>

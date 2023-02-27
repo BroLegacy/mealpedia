@@ -11,6 +11,10 @@ img{
   width: 30vw;
 }
 
+button{
+  padding: 10px 20px !important;
+}
+
 @media (max-width: 768px) {
   img{
     width: 50vw;
