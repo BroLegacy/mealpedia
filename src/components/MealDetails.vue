@@ -1,6 +1,6 @@
 <template>
   <div v-if="meal">
-    <h3>{{ meal.strMeal }}</h3>
+    <h1>{{ meal.strMeal }}</h1>
     <img :src="meal.strMealThumb" :alt="meal.strMeal" />
     <p><strong>Catégorie:</strong> {{ meal.strCategory }}</p>
     <p><strong>Origine:</strong> {{ meal.strArea }}</p>

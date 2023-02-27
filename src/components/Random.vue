@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Plat Aléatoire</h2>
+    <h1>Plat Aléatoire</h1>
     <button @click="getRandomMeal">Afficher un plat aléatoire</button>
     <div v-if="meal">
       <h3>{{ meal.strMeal }}</h3>

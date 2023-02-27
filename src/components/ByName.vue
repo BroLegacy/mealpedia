@@ -3,14 +3,14 @@
     <h1>Recherche de plats par nom</h1>
     <div>
       <label for="search">Rechercher un plat:</label>
-      <input id="search" type="text" v-model="searchTerm" @keyup.enter="searchMeal">
-      <button @click="searchMeal">Rechercher</button>
+      <input id="search" type="text" v-model="searchTerm" @input="searchMeal">
     </div>
     <div v-if="meals && meals.length">
       <h2>{{ meals.length }} résultats :</h2>
       <ul>
         <li v-for="meal in meals" :key="meal.idMeal">
-          <router-link :to="{ name: 'meal-details', params: { id: meal.idMeal } }">{{ meal.strMeal }}</router-link>        </li>
+          <router-link :to="{ name: 'meal-details', params: { id: meal.idMeal } }">{{ meal.strMeal }}</router-link>
+        </li>
       </ul>
     </div>
     <div v-else-if="searchTerm===''">
@@ -35,8 +35,8 @@ export default {
   },
   methods: {
     searchMeal() {
-      if (!this.searchTerm) {
-        return;
+      if (this.searchTerm==='') {
+        return this.meals = [];
       }
       axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.searchTerm}`)
           .then(response => {

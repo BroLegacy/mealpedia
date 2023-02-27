@@ -13,8 +13,6 @@ const routes = [
     { path: '/category', component: ByCategory },
     { path: '/zone', component: ByZone },
     { path: '/meals/:id', name: 'meal-details', component: MealDetails, props: true }
-
-
 ]
 
 const router = createRouter({
