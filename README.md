@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # mealpedia
 =======
 # mealpedia
@@ -30,4 +29,3 @@ npm run dev
 ```sh
 npm run build
 ```
->>>>>>> c365bde (First commit for netlify, add all VUE component)
